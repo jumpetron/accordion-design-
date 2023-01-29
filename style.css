@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #00425A;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 35%;
+}
+
+
+.accordion-item{
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 2px solid #DBA39A;
+}
+
+.accordion-item:nth-child(odd){
+    background-color: #F8EDE3;
+}
+
+.accordion-item:nth-child(even){
+    background-color: #DFD3C3;
+}
+
+.accordion-item button{
+    width: 100%;
+    padding: 1em 0;
+    border: none;
+    outline: none;
+    text-align: left;
+    background: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+
+.accordion-item button .icon{
+    position: absolute;
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border-radius: 23px;
+    border: 1px solid;
+    background: #fff;
+    top: 18px;
+    right: 0;
+    color: #DBA39A;
+}
+
+.accordion-item button:hover,
+.accordion-item button:focus{
+    cursor: pointer;
+}
+
+.accordion-item button .icon::before{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 12px;
+    height: 2px;
+    top: 10px;
+    left: 5px;
+    background-color: currentColor;
+}
+
+.accordion-item button .icon::after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 2px;
+    height: 12px;
+    top: 5px;
+    left: 10px;
+    background-color: currentColor;
+}
+
+.accordion-item button[aria-expanded="true"] .icon::after{
+    width: 0;
+}
+
+.accordion-item button[aria-expanded="true"] {
+    border-bottom: 1px solid #DBA39A;
+}
+
+.accordion-content p{
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 12px 0;
+}
+
+.accordion-item button[aria-expanded="true"]+.accordion-content{
+    opacity: 1;
+    max-height: 174px;
+    transition: all 200ms linear;
+}
+
+.accordion-content{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
